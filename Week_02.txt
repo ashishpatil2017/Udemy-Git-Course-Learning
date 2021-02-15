@@ -1,0 +1,45 @@
+how to check different between commited file and local file 
+git difftool filename.txt (this command will open p4merge and will compare repository file with local file)
+
+******************************************************************************
+Branching and Merging : 
+types of mergings : 
+1)fast forward merge 
+2)automatic merge
+3)manual merge 
+
+*******************************************************************************
+What is HEAD in git ?
+It is the last commit of current branch 
+
+*******************************************************************************
+creating new branch and working on it 
+use below command
+git checkout -b new_branch_name  (This will switch to new branch and you can do changes here)
+
+If you want to switch to master branch again , use below command :
+git checkout master
+
+if you want to merge other branch changes to master branch ,  follow below commands
+git merge new_branch_name (current branch should be master branch to merge this new_branch_name to master)
+
+Once you merge new_branch_name to master branch , you delete new_branch_name using below command :
+git branch -d new_branch_name
+
+
+*******************************************************************************
+take the latest update before doing any changes to avoidn confilcts 
+*******************************************************************************
+If you want to save your work and commit it later , you can do so by using below command  
+saving means git stashing :
+git stash - saves current changes which needs to be commited 
+later whenver you want to commit new stashed changes you can do so by using below command 
+git stash pop 
+
+you can also check list of shashed files :
+git stash list
+
+*******************************************************************************
+
+
+

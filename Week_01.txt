@@ -1,1 +1,118 @@
 What is Git ? 
+decentralized system , where we can keep our files and can be managed by everyone in the team 
+
+What is repository : 
+its a set of files managed by git 
+this can contain history of commited files
+
+************************************************************************************
+softwares required for git usage :
+1)Git for windows
+2)Notepad ++ 
+3)P4Merge
+
+Notepad++ and Git Integration :
+go to notepad ++ path and copy the path 
+now go to system properties -> advance setting -> environmental varibable -> system varibable -> path 
+add this notepadd address in that path and then click ok 
+now you can check in git command prompt by typing Notepad++ 
+It will work
+
+P4Merge and Git Integration : 
+git config --global diff.tool p4merge
+git config --global difftool.p4merge.path "C:\Program Files\Perforce\p4merge.exe"
+git config --global difftool.prompt false
+
+git config --global merge.tool p4merge
+git config --global mergetool.p4merge.path "C:\Program Files\Perforce\p4merge.exe"
+git config --global mergetool.prompt false
+
+************************************************************************************
+
+The Basic overview : 
+- command to list directories 
+  ls -la
+  
+- command to make new folder :
+  mkdir folder_name
+
+- command to create new repository :
+  git init repository_name
+  
+go inside the repository and you can commit it 
+
+************************************************************************************
+
+Git States :
+1)working directory (local)
+2)staging area (local)
+3)repository (local)
+4)remote repository
+
+************************************************************************************
+
+First commit : 
+(How to commit)
+create one text file in local directory 
+then 
+perform following commands
+git add filename.txt(moving to staging)
+git commit -m "one file added to commit" (moving to local repository)
+git push (moving to master repository)
+
+************************************************************************************
+
+Starting with the existing projects : 
+(how to make a existing folder as git repository folder)
+perform following commands 
+git init . 
+(after this command you will see .git file in that folder and hence that will convert into git repository)
+
+(if you want make git repository to normal folder then perform following command)
+rm rf .git
+************************************************************************************
+ Important : 
+ git add . (This command will add all the existing files to staging state)
+************************************************************************************
+Commit details and Log Show :
+git log - this command will give you commit history for all the changes for that repository
+git show - this command will give you what all changes we commited 
+************************************************************************************
+Important :
+we can commit without adding the file or modified changes 
+use below command to do the same 
+git commit -am "commit message"
+************************************************************************************
+How to revert changes once you commited changes to staging state :
+git reset HEAD filename.txt
+
+how to update file with latest in the repository :
+git checkout -- filename.txt
+
+***********************************************************************************
+we can do alias to any of the commands
+use below command to add alias to any command 
+git config --global alias.newcommand "rm -rf filename.txt"
+then you can check whether its added or not using below command 
+git config --global --list 
+and the you can use that command 
+git newcommand
+***********************************************************************************
+Renaming file :
+use below command to rename the file 
+git mv old_file.txt new_file.txt
+note : after this commit is neccosory
+
+Deleting the file :
+git rm filename.txt
+after delete we need to commit changes again  
+**********************************************************************************
+
+
+
+
+
+
+
+
+
